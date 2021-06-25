@@ -2,6 +2,7 @@
 Thrift server container running spark hive thrift server over http binding and cliservice endpoint
 
 Popular BI tools like PowerBI and Tableau cannot access spark over standard thriftserver 10000 RPC port
+
 This docker container launches Thrift server with the HTTP binding configured for 10001 port:
 
 http://localhost:10001/cliservice
