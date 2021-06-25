@@ -6,8 +6,8 @@ RUN apk add --no-cache R
 RUN apk add --no-cache perl procps curl ca-certificates tar supervisor bash procps coreutils rsync openssh
 
 #prep for the thrift http server config and entrypoint
-COPY ./hive-site.xml /spark/conf/hive-site.xml
-COPY ./entrypoint.sh /entrypoint.sh
-COPY ./start-thriftserver.sh /start-thriftserver.sh
+COPY ./conf/hive-site.xml /spark/conf/hive-site.xml
+COPY ./init/entrypoint.sh /entrypoint.sh
+COPY ./init/start-thriftserver.sh /start-thriftserver.sh
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["/start-thriftserver.sh"]
